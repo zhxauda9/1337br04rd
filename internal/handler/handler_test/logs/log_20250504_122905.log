@@ -1,0 +1,4 @@
+time=2025-05-04T12:29:05.354+05:00 level=INFO msg="Server starting..." logFile=logs/log_20250504_122905.log
+time=2025-05-04T12:29:05.355+05:00 level=ERROR msg="Comment not found" method=GET
+time=2025-05-04T12:29:05.355+05:00 level=INFO msg="Server starting..." logFile=logs/log_20250504_122905.log
+time=2025-05-04T12:29:05.356+05:00 level=INFO msg="Successfully got comments of post" method=GET

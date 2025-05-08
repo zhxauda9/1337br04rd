@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/static/style/catalog.css" />
+  <title>{{ .Title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="transparent-header">
+    <div class="logo">1337b04rd</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="">Catalog</a>
+      <a href="/archive">Archive</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside>
+      <img src="/static/images/sticker3.png">
+      <h2>1337b04rd</h2>
+      <h2 class="neon">Catalog</h2>
+      <p><strong>User:</strong>{{ .Name}}</p>
+      <p>Explore the threads below 👇</p>
+      <p class="tip">Not seeing your madness yet? Start your own thread!</p>
+      <button onclick="window.location.href='/posts/create';" class="btn neon-yellow">Create New Thread</button>
+      <button onclick="window.location.href='/archive';" class="btn neon-yellow">Go to Archive</button>
+    </aside>
+
+    <main>
+      <div class="thread-container">
+        {{ range .Posts }}
+          <div class="thread">
+            <a href="/posts/{{ .ID }}">
+                <h2>{{ .Title }}</h2>
+                <pre>{{ .Content }}</pre><br>
+                {{if .ImageURL}}
+                <div class="image-container">
+                  <img src="{{ .ImageURL }}" alt="{{ .Title }}">
+                </div>
+                {{end}}
+            </a>
+          </div>
+        {{ else }}
+          <p>No posts available.</p>
+        {{ end }}
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    <p>🧬 Built by a Rick who got tired of Reddit. No warranties. Not even existential.</p>
+    <p>azhalgas & mboranba </p>
+    <p>Alem School</p>
+  </footer>
+</body>
+</html>

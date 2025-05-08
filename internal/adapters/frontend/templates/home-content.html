@@ -1,0 +1,215 @@
+{{define "home-content.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/static/style/home.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <header class="transparent-header">
+      <div class="logo">1337b04rd</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/posts">Catalog</a>
+        <a href="/archive">Archive</a>
+      </nav>
+    </header>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - hero - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <section class="hero" style="background-image: url('/static/images/background1.jpg');">
+      <div class="hero-left">
+        <h1>Welcome to <span class="neon">1337b04rd</span></h1>
+        <p>Broadcast your weirdest ideas across the multiverse.</p>
+        <div class="buttons">
+          <a href="/posts" class="btn neon-yellow">View Posts</a>
+          <a href="/archive" class="btn neon-yellow">View Archive</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="portal-glow">
+          <img src="/static/images/hero.png" alt="Rick and Morty Exit Portal" />
+        </div>
+      </div>
+    </section>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - content - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    
+    <section class="about">
+      <div class="about-text">
+        <h2>🧬 What is 1337b04rd?</h2>
+        <p>
+          Ever wanted to scream into the cosmic abyss and hear a burpy Rick scream back? <br>
+          <strong>1337b04rd</strong> is your portal into pure dimensional madness 💥. No rules. No IDs. Just infinite versions of Ricks, Mortys, and the occasional blob with feelings. <br><br>
+          Each session gives you a randomized avatar  — maybe you're Evil Morty today, maybe a Cronenberg Rick tomorrow. Whatever. The board doesn't care, and neither should you.
+          <br><br> No Jerries. Ever.
+        </p>
+      </div>
+    </section>
+
+    <section class="about3">
+      <div class="about-text3">
+        <h2>🧪 Infinite weird. Zero context.</h2>
+        <p>
+          The Council banned this board in 12 dimensions. We made 47 more. <br><br>
+          Speak nonsense. Post chaos. Embrace the multiverse. <br><br>
+          And remember: nobody exists on purpose, nobody belongs anywhere, everybody’s gonna die. Come post.
+        </p>
+      </div>
+    </section>
+    
+
+    <section class="features">
+      <h2>⚡ Core Features That Slap</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <h3>⚗️ Random Avatars</h3>
+          <p>Every time you enter, you get a totally random persona — Rick, Morty, Meeseeks, or even some gross variant we don't talk about. </p>
+        </div>
+        <div class="feature">
+          <h3>👻 Anonymous & Chaos-Driven</h3>
+          <p>No sign-ups, no cookies, no governments. Just pure interdimensional chaos and untraceable madness. </p>
+        </div>
+        <div class="feature">
+          <h3>🖼️ Meme Threads</h3>
+          <p>Drop cursed images, post your multiverse memes, or show off your newest plumbus. Literally anything goes (except Jerries). </p>
+        </div>
+        <div class="feature">
+          <h3>⏳ Ephemeral Madness</h3>
+          <p>Posts vanish with time . No history. No receipts. Just like your fleeting grip on sanity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about2">
+      <div class="container" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+        <div class="about-image portal-glow" style="flex: 1; min-width: 300px;">
+          <img src="/static/images/rick-morty.avif" alt="Multiverse portal" style="width: 100%; border-radius: 16px;" />
+        </div>
+        <div class="about-text" style="flex: 2; min-width: 300px;">
+          <h2>🧬 What is 1337b04rd?</h2><br>
+          <p>
+            🚀 Ever felt like your thoughts don’t belong in this dimension? Great — they don’t.<br />
+            Welcome to <strong>1337b04rd</strong> — the message board where the multiverse unhinges.<br />
+            🌌 Every post spins a new reality. No usernames, no memory, no mercy.
+          </p>
+          <p>
+            🧪 Your avatar? Randomized. Your voice? Interdimensional. Your memes? Mutated in transit.<br />
+            👾 Whether you’re screaming into the void or serenading a sentient blobfish, this is your space.<br />
+            ✨ No logins. No filters. No rules. Just raw, uncut multiverse energy.
+          </p>
+          <p>
+            🔮 Jump in, drop truth bombs, vanish into cosmic mist. One click, infinite timelines. <br />
+            Say less. Post more. Embrace the absurd.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="characters">
+      <h2>🧬 Meet the Multiverse</h2>
+      <div class="character-grid" id="character-grid">
+      </div> -->
+      
+      <div class="pagination" id="pagination"></div>
+    </section>
+
+    <footer class="footer">
+      <p>🧬 Built by a Rick who got tired of Reddit. No warranties. Not even existential.</p>
+      <p>azhalgas & mboranba </p>
+      <p>Alem School</p>
+    </footer>
+
+    <!-- <script>
+      const characters = [
+        {{range .Characters}}
+        {
+          "Image": "{{.Image}}",
+          "Name": "{{.Name}}",
+          "Species": "{{.Species}}",
+          "Gender": "{{.Gender}}",
+          "Status": "{{.Status}}",
+          "Type": "{{.Type}}"
+        },
+        {{end}}
+      ];
+  
+      const charactersPerPage = 6;
+      let currentPage = 1;
+  
+      // Function to display characters for the current page
+      function displayCharacters() {
+        const startIndex = (currentPage - 1) * charactersPerPage;
+        const endIndex = currentPage * charactersPerPage;
+        const pageCharacters = characters.slice(startIndex, endIndex);
+  
+        const characterGrid = document.getElementById('character-grid');
+        characterGrid.innerHTML = ''; // Clear current grid
+  
+        pageCharacters.forEach(character => {
+          const characterCard = document.createElement('div');
+          characterCard.classList.add('character-card');
+          characterCard.innerHTML = `
+            <img src="${character.Image}" alt="${character.Name}" />
+            <h3>${character.Name}</h3>
+            <p><strong>Species:</strong> ${character.Species}</p>
+            <p><strong>Gender:</strong> ${character.Gender}</p>
+            <p><strong>Status:</strong> ${character.Status}</p>
+            ${character.Type ? `<p><strong>Type:</strong> ${character.Type}</p>` : ''}
+          `;
+          characterGrid.appendChild(characterCard);
+        });
+      }
+  
+      // Function to create pagination buttons
+      function createPagination() {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = ''; // Clear previous pagination
+  
+        const totalPages = Math.ceil(characters.length / charactersPerPage);
+  
+        for (let i = 1; i <= totalPages; i++) {
+          const button = document.createElement('button');
+          button.textContent = i;
+          button.onclick = () => {
+            currentPage = i;
+            displayCharacters();
+            updateActivePage(i);
+          };
+  
+          if (i === currentPage) {
+            button.classList.add('active');
+          }
+  
+          pagination.appendChild(button);
+        }
+      }
+  
+      // Function to highlight the active page button
+      function updateActivePage(page) {
+        const buttons = document.querySelectorAll('.pagination button');
+        buttons.forEach(button => {
+          button.classList.remove('active');
+        });
+        const activeButton = document.querySelector(`.pagination button:nth-child(${page})`);
+        if (activeButton) activeButton.classList.add('active');
+      }
+  
+      displayCharacters();
+      createPagination();
+    </script> -->
+  
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - footer - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+{{ end }}

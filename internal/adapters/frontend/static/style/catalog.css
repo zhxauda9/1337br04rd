@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../fonts/get_schwifty.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Dubdub';
+    src: url('../fonts/WubbaLubbaDubDub.ttf') format('truetype');
+  }
+  
+  :root {
+    --neon-green: #88ff00;
+    --neon-blue: rgb(71,188,178);
+    --neon-yellow: rgb(217,255,0);
+    --neon-purple: #9a00fa;
+    --neon-orange: rgb(255,140,0);
+    --bg-dark: #0e0e0e;
+    --bg-black:#0b1e2c;
+    --text-light: #f0f0f0;
+    --glass: rgba(0, 0, 0, 0.219);
+  }
+
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(145deg, #0b2c14, #000000);
+    color: var(--text-light);
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  header.transparent-header {
+    align-items: center;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 10px var(--neon-green);
+    position: sticky;
+  }
+  
+  header .logo {
+    font-family: 'Get Schwifty', cursive;
+    font-size: 2rem;
+    color: var(--neon-green);
+    text-shadow: 0 0 6px var(--secondary-neon);
+  }
+  
+  header nav a {
+    margin: 0 1rem;
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--primary-neon);
+  }
+  
+  aside {
+    flex: 0 0 600px;
+    padding: 1rem;
+    background: var(--glass);
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    line-height: 1.6;
+    height: fit-content;
+  }
+
+  
+  aside h2 {
+    font-size: 5rem;
+    font-family: 'Get Schwifty', cursive;
+    color: var(--neon-blue);
+    text-shadow: 2px 2px 2px var(--bg-black), 0 0 3px var(--neon-green),
+                 0 0 6px var(--neon-green), 0 0 15px var(--neon-blue),
+                 0 0 10px var(--neon-blue);
+    margin-bottom: 0;
+  }
+  
+  aside .neon {
+    margin-top: 0;
+    color: var(--neon-green);
+    margin-bottom: 20px;
+  }
+  
+  aside .tip {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  aside p {
+    font-size: 2rem;
+    color: var(--text-light);
+  }
+  
+  main {
+    flex: 1;
+  }
+
+  .thread-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .thread {
+    background: var(--glass);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    line-height: 1.75;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .thread:hover {
+    transform: scale(1.01);
+  }
+  
+  .thread h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    color: var(--neon-yellow);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+  }
+  
+  .thread pre {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    color: #f0f0f0;
+  }
+  
+  .thread img {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 1rem auto 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px var(--neon-blue);
+    object-fit: cover;
+  }
+  
+  /* Контейнер для ограниченного размера */
+  .image-container {
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  .thread pre::-webkit-scrollbar {
+    height: 8px;
+  }
+  .thread pre::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  .thread pre::-webkit-scrollbar-thumb {
+    background-color: var(--neon-yellow);
+    border-radius: 8px;
+  }
+  
+  
+  
+  
+  .btn {
+    font-family: "Orbitron";
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 1rem 1rem;
+    background: var(--glass);
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 0 10px var(--neon-yellow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--bg-black);
+    color: var(--neon-yellow);
+    box-shadow: 0 0 12px var(--neon-green), 0 0 20px var(--neon-green);
+  }
+  
+
+  .comments {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  
+  .comments-title {
+    color: var(--neon-blue);
+    font-size: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comment-card {
+    background: var(--glass);
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease;
+  }
+  
+  .comment-card:hover {
+    transform: scale(1.01);
+  }
+  
+  .comment-author {
+    color: var(--neon-yellow);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .comment-card pre{
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    color: #f0f0f0;
+  }
+  
+  .comment-reply {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-top: 0.5rem;
+  }
+
+  .comment-card pre::-webkit-scrollbar {
+    height: 8px;
+  }
+  .comment-card pre::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+  .comment-card pre::-webkit-scrollbar-thumb {
+    background-color: var(--neon-yellow);
+    border-radius: 8px;
+  }
+  .no-comments {
+    color: #aaa;
+    font-size: 0.95rem;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background: #111;
+    border-top: 2px solid var(--highlight);
+    font-size: 0.9rem;
+    color: #888;
+  }

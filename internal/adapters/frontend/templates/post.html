@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}} - Post</title>
+    <link rel="stylesheet" href="/static/style/catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="logo">1337b04rd</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/posts">Catalog</a>
+            <a href="/archive">Archive</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside>
+            <img src="/static/images/sticker1.png">
+            <h2>{{.Title}}</h2>
+            <h2 class="neon">Post Details</h2>
+            <p><strong>Post ID:</strong> {{.Post.ID}}</p>
+            <a href="/" class="btn">Back to Catalog</a>
+            
+        </aside>
+
+        <main>
+            <div class="thread-container">
+                <div class="thread">
+                    <h2>{{.Post.Title}}</h2>
+                    <pre>{{.Post.Content}}</pre>
+                    {{if .Post.ImageURL}}
+                    <div class="image-container">
+                        <img src="{{ .Post.ImageURL }}" alt="{{ .Title }}">
+                      </div>
+                    {{end}}
+                </div>
+
+                <div class="comments">
+                    <h3 class="comments-title">Comments:</h3>
+                    {{range .Comments}}
+                      <div class="comment-card">
+                        <p class="comment-author">{{.AuthorName}}</p>
+                        <p> {{ .Title}}</p>
+                        <pre>{{.Content}}</pre>
+                        {{if .ImageURL}}
+                        <div class="image-container">
+                            <img src="{{ .ImageURL}}" alt="{{ .AuthorName}}">
+                        </div>
+                        {{end}}
+                        {{if .ReplyToCommentID}}
+                          <p class="comment-reply">Replying to comment <strong>#{{.ReplyToCommentID}}</strong></p>
+                        {{end}}
+                        <p>{{ .CreatedAt}}</p>
+                      </div>
+                    {{else}}
+                      <p class="no-comments">No comments yet.</p>
+                    {{end}}
+                  </div>
+                  
+
+                <div class="add-comment" style="margin-top: 3rem;">
+                    <h3 style="color: var(--neon-green); font-size: 2rem;">Add a Comment:</h3>
+                    <form action="/comments/create" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="post_id" value="{{.Post.ID}}">
+                        
+                        <label for="title">Title:</label><br>
+                        <input type="text" name="title" id="title" required class="btn"><br><br>
+
+                        <label for="content">Content:</label><br>
+                        <textarea name="content" id="content" required class="btn" style="width: 100%; height: 100px;"></textarea><br><br>
+
+                        <label for="image">Image:</label><br>
+                        <input type="file" name="image" id="image" class="btn"><br><br>
+
+                        <button type="submit" class="btn">Add Comment</button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <p>🧬 Built by a Rick who got tired of Reddit. No warranties. Not even existential.</p>
+        <p>azhalgas & mboranba </p>
+        <p>Alem School</p>
+      </footer>
+</body>
+</html>

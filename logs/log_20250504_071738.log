@@ -1,0 +1,53 @@
+time=2025-05-04T07:17:38.041Z level=INFO msg="Server starting..." logFile=logs/log_20250504_071738.log
+time=2025-05-04T07:18:33.925Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:18:43.377Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:19:48.523Z level=INFO msg="Successfully rendered catalog page" method=GET
+time=2025-05-04T07:19:52.297Z level=INFO msg="Successfully rendered created post page" method=GET
+time=2025-05-04T07:19:58.728Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:20:05.472Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:07.529Z level=INFO msg="Successfully created post" method=POST
+time=2025-05-04T07:21:07.586Z level=INFO msg="Successfully rendered catalog page" method=GET
+time=2025-05-04T07:21:12.177Z level=INFO msg="Successfully rendered post page" method=GET
+time=2025-05-04T07:21:15.256Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:19.669Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:20.868Z level=INFO msg="Successfully created comment" method=POST
+time=2025-05-04T07:21:20.879Z level=INFO msg="Successfully rendered post page" method=GET
+time=2025-05-04T07:21:29.261Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:34.020Z level=INFO msg="Successfully created comment" method=POST
+time=2025-05-04T07:21:34.032Z level=INFO msg="Successfully rendered post page" method=GET
+time=2025-05-04T07:21:41.525Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:49.887Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:21:56.659Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:05.628Z level=ERROR msg="Failed to archive post" error="post with id 1 not found" method=POST
+time=2025-05-04T07:22:14.576Z level=INFO msg="Successfully rendered catalog page" method=GET
+time=2025-05-04T07:22:16.087Z level=INFO msg="Successfully rendered post page" method=GET
+time=2025-05-04T07:22:20.941Z level=INFO msg="Successfully archived post" method=POST
+time=2025-05-04T07:22:21.214Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:23.047Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:26.739Z level=INFO msg="Successfully rendered archive page" method=GET
+time=2025-05-04T07:22:32.089Z level=INFO msg="Successfully rendered archived post page" method=GET
+time=2025-05-04T07:22:33.172Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:33.821Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:35.052Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:38.661Z level=INFO msg="Successfully rendered archive page" method=GET
+time=2025-05-04T07:22:39.406Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:22:45.573Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:21.584Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:23.467Z level=INFO msg="Successfully rendered created post page" method=GET
+time=2025-05-04T07:36:25.094Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:26.944Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:27.184Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:28.282Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:28.772Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:29.729Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:29.729Z level=INFO msg="Successfully rendered home page" method=GET
+time=2025-05-04T07:36:49.387Z level=ERROR msg="Failed to fetch characters from the API." error="failed to fetch characters: Get \"https://rickandmortyapi.com/api/character?page=37\": unexpected EOF" method=GET
+time=2025-05-04T07:36:49.388Z level=INFO msg="Successfully rendered error page" method=GET
+time=2025-05-04T07:36:49.387Z level=ERROR msg="Failed to fetch characters from the API." error="failed to fetch characters: Get \"https://rickandmortyapi.com/api/character?page=39\": unexpected EOF" method=GET
+time=2025-05-04T07:36:49.389Z level=INFO msg="Successfully rendered error page" method=GET
+time=2025-05-04T07:36:49.387Z level=ERROR msg="Failed to fetch characters from the API." error="failed to fetch characters: Get \"https://rickandmortyapi.com/api/character\": unexpected EOF" method=GET
+time=2025-05-04T07:36:49.387Z level=ERROR msg="Failed to fetch characters from the API." error="failed to fetch characters: Get \"https://rickandmortyapi.com/api/character?page=41\": unexpected EOF" method=GET
+time=2025-05-04T07:36:49.390Z level=INFO msg="Successfully rendered error page" method=GET
+time=2025-05-04T07:36:49.390Z level=INFO msg="Successfully rendered error page" method=GET
+time=2025-05-04T07:37:20.923Z level=ERROR msg="Failed to fetch characters from the API." error="failed to fetch characters: Get \"https://rickandmortyapi.com/api/character\": dial tcp 3.124.100.143:443: i/o timeout" method=GET
+time=2025-05-04T07:37:20.923Z level=INFO msg="Successfully rendered error page" method=GET

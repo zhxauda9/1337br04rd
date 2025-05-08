@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../fonts/get_schwifty.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Dubdub';
+    src: url('../fonts/WubbaLubbaDubDub.ttf') format('truetype');
+  }
+
+:root {
+    --neon-green: #88ff00;
+    --neon-blue: rgb(71,188,178);
+    --neon-yellow: rgb(217,255,0);
+    --neon-purple: #9a00fa;
+    --neon-orange: rgb(255,140,0);
+    --bg-dark: #0e0e0e;
+    --bg-black:#0b1e2c;
+    --text-light: #f0f0f0;
+    --glass: rgba(0, 0, 0, 0.219);
+  }
+
+.error-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dubdub', cursive;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+}
+
+.error-container {
+    background: var(--glass);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    line-height: 1.6;
+    animation: shake 3s ease-in-out infinite alternate;
+}
+
+.error-container h1 {
+    font-size: 7rem;
+    font-family: 'Get Schwifty', cursive;
+    color: var(--neon-blue);
+    text-shadow:
+    2px 2px 2px var(--bg-black),
+    0 0 3px var(--neon-green),
+    0 0 6px var(--neon-green),
+    0 0 15px var(--neon-blue),
+    0 0 10px var(--neon-blue);
+}
+
+.error-container p {
+    font-size: 3rem;
+    color: var(--neon-blue);
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 2rem;
+    background: var(--neon-green);
+    color: black;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--neon-green);
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--neon-yellow);
+    box-shadow: 0 0 20px var(--neon-yellow), 0 0 30px var(--neon-green);
+    transform: scale(1.1);
+}
+
+@keyframes shake {
+    0%, 100% {
+        filter: drop-shadow(0 0 15px var(--neon-blue));
+      }
+    50% {
+    filter: drop-shadow(0 0 30px var(--neon-green));
+    }
+}
